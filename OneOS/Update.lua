@@ -43,10 +43,6 @@ end
 LoadTextInMiddleOfScreen("Updating")
 
 local function VerfPathExists(FilePath)
-    term.setCursorPos(1,MontierY)
-    term.clearLine()
-    term.write(FilePath)
-    
     fs.makeDir(FilePath)
 end
 
