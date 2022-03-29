@@ -46,7 +46,7 @@ os.sleep(1)
 LoadTextInMiddleOfScreen("OneOS","updating updater")
 --download Update file
 if args[1] == "true" then
-    local UpdateFile = http.get("https://raw.githubusercontent.com/Ai-Kiwi/OneOS/main/OneOS/Update.lua" .. "cb=" .. math.random(1,10000))
+    local UpdateFile = http.get("https://raw.githubusercontent.com/Ai-Kiwi/OneOS/main/OneOS/Update.lua" .. "?cb=" .. math.random(1,10000))
     if UpdateFile then
         local UpdateFileText = UpdateFile.readAll()
         UpdateFile.close()
