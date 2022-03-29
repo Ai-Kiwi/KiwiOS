@@ -52,12 +52,12 @@ end
 
 
 local function DownloadFile(FilePath,URL) 
+    --make sure path is a thing
+    VerfPathExists(fs.getDir(FilePath))
+    
     term.setCursorPos(1,MontierY)
     term.clearLine()
     term.write(FilePath)
-
-    --make sure path is a thing
-    VerfPathExists(fs.getDir(FilePath))
 
     --download data from url
     local URLOBJECT = http.get(URL .. "?cb=" .. math.random(1,10000))
