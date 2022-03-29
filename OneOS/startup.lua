@@ -45,7 +45,7 @@ LoadTextInMiddleOfScreen("OneOS")
 os.sleep(1)
 LoadTextInMiddleOfScreen("OneOS","updating updater")
 --download Update file
-if args[1] == true then
+if args[1] == "true" then
     local UpdateFile = http.get("https://raw.githubusercontent.com/OneOS/OneOS/master/OneOS/Update.lua")
     if UpdateFile then
         local UpdateFileText = UpdateFile.readAll()
