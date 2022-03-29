@@ -60,7 +60,7 @@ local function DownloadFile(FilePath,URL)
     VerfPathExists(fs.getDir(FilePath))
 
     --download data from url
-    local URLOBJECT = http.get(URL .. "cb=" .. math.random(1,10000))
+    local URLOBJECT = http.get(URL .. "?cb=" .. math.random(1,10000))
     local FileData = URLOBJECT.readAll()
     URLOBJECT.close()
 
