@@ -1,3 +1,5 @@
+local args = {...}
+
 local function LoadTextInMiddleOfScreen(TextToWrite,TextToWriteBelow)
     term.clear()
     --makes a noice start prompt using auto scaled text 
@@ -43,10 +45,25 @@ LoadTextInMiddleOfScreen("OneOS")
 os.sleep(1)
 LoadTextInMiddleOfScreen("OneOS","updating updater")
 --download Update file
---code not done
+if args[1] == true then
+    local UpdateFile = http.get("https://raw.githubusercontent.com/OneOS/OneOS/master/OneOS/Update.lua")
+    if UpdateFile then
+        local UpdateFileText = UpdateFile.readAll()
+        UpdateFile.close()
+        local UpdateFileFile = fs.open("OneOS/Update.lua","w")
+        UpdateFileFile.write(UpdateFileText)
+        UpdateFileFile.close()
 
---run
-shell.run("OneOS/temp/Update.lua")
+        shell.run("OneOS/Update.lua")
+    else
+        LoadTextInMiddleOfScreen("OneOS","Update failed")
+        os.sleep(1)
+    end
+end
+
+
+
+
 
 
 shell.run("OneOs/kernil.lua")
