@@ -1,1 +1,1 @@
-shell.run("OneOs/startup.lua")
+shell.run("OneOs/startup.lua true")
