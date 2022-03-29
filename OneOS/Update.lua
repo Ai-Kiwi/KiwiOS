@@ -73,16 +73,16 @@ end
 
 
 --files in root
-DownloadFile("startup.lua","https://raw.githubusercontent.com/OneOS/OneOS/master/startup.lua")
+DownloadFile("startup.lua","https://raw.githubusercontent.com/Ai-Kiwi/OneOS/master/startup.lua")
 --download files in OneOS
-DownloadFile("OneOS/kernil.lua","https://raw.githubusercontent.com/OneOS/OneOS/master/OneOS/kernil.lua")
-DownloadFile("OneOS/startup.lua","https://raw.githubusercontent.com/OneOS/OneOS/master/OneOS/startup.lua")
-DownloadFile("OneOS/windowManager.lua","https://raw.githubusercontent.com/OneOS/OneOS/master/OneOS/windowManager.lua")
+DownloadFile("OneOS/kernil.lua","https://raw.githubusercontent.com/Ai-Kiwi/OneOS/master/OneOS/kernil.lua")
+DownloadFile("OneOS/startup.lua","https://raw.githubusercontent.com/Ai-Kiwi/OneOS/master/OneOS/startup.lua")
+DownloadFile("OneOS/windowManager.lua","https://raw.githubusercontent.com/Ai-Kiwi/OneOS/master/OneOS/windowManager.lua")
 --files in OneOs/sysapp
-DownloadFile("OneOS/sysapp/appManager.lua","https://raw.githubusercontent.com/OneOS/OneOS/master/OneOS/sysapp/appManager.lua")
-DownloadFile("OneOS/sysapp/desktop.lua","https://raw.githubusercontent.com/OneOS/OneOS/master/OneOS/sysapp/desktop.lua")
-DownloadFile("OneOS/sysapp/desktop.lua","https://raw.githubusercontent.com/OneOS/OneOS/master/OneOS/sysapp/desktop.lua")
-DownloadFile("OneOS/sysapp/StartMenu.lua","https://raw.githubusercontent.com/OneOS/OneOS/master/OneOS/sysapp/StartMenu.lua")
+DownloadFile("OneOS/sysapp/appManager.lua","https://raw.githubusercontent.com/Ai-Kiwi/OneOS/master/OneOS/sysapp/appManager.lua")
+DownloadFile("OneOS/sysapp/desktop.lua","https://raw.githubusercontent.com/Ai-Kiwi/OneOS/master/OneOS/sysapp/desktop.lua")
+DownloadFile("OneOS/sysapp/desktop.lua","https://raw.githubusercontent.com/Ai-Kiwi/OneOS/master/OneOS/sysapp/desktop.lua")
+DownloadFile("OneOS/sysapp/StartMenu.lua","https://raw.githubusercontent.com/Ai-Kiwi/OneOS/master/OneOS/sysapp/StartMenu.lua")
 
 
 VerfPathExists("UserData/Desktop")
