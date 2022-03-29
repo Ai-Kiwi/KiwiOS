@@ -26,7 +26,7 @@ term.setTextColor(colors.white)
 --get verson installed
 local function GetVersionInstalled()
     local VersionInstalled = nil
-    local VersionFile = fs.open("OneOS/version.txt","r")
+    local VersionFile = fs.open("OneOS/Version_Installed.txt","r")
     if VersionFile then
         VersionInstalled = VersionFile.readLine()
         VersionFile.close()
