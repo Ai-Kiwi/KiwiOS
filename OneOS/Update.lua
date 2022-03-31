@@ -94,3 +94,6 @@ VerfPathExists("UserData/Downloads")
 local UpdateFile = fs.open("OneOS/Version_Installed.txt","w")
 UpdateFile.write("0.1")
 UpdateFile.close()
+
+LoadTextInMiddleOfScreen("Update Complete","Thanks for waiting")
+os.sleep(1)
