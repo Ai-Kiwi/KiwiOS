@@ -246,10 +246,10 @@ while #AppsRunnning > 0 do
 
     --things to help the computer incase of proleam like emergancy commands, task manager and cmd.
     if PullEventTable[1] == "key" then
-        if PullEventTable[2] == keys.delete then
+        if PullEventTable[2] == keys.home then
             CreateNewApp("taskmanager","OneOS/sysapp/taskmanager.lua",50,"1")   
         end
-        if PullEventTable[2] == keys.home then
+        if PullEventTable[2] == keys.delete then
             CreateNewApp("shell","rom/programs/shell.lua",1,"1")
         end
     end
