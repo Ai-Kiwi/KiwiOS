@@ -77,7 +77,9 @@ DownloadFile("OneOS/sysapp/desktop.lua","https://raw.githubusercontent.com/Ai-Ki
 DownloadFile("OneOS/sysapp/desktop.lua","https://raw.githubusercontent.com/Ai-Kiwi/OneOS/master/OneOS/sysapp/desktop.lua")
 DownloadFile("OneOS/sysapp/StartMenu.lua","https://raw.githubusercontent.com/Ai-Kiwi/OneOS/master/OneOS/sysapp/StartMenu.lua")
 DownloadFile("OneOS/libs/ToasterTools.lua","https://raw.githubusercontent.com/Ai-Kiwi/OneOS/master/OneOS/libs/ToasterTools.lua")
-
+--files in OneOS/libs
+DownloadFile("OneOS/libs/ToasterTools.lua","https://raw.githubusercontent.com/Ai-Kiwi/OneOS/master/OneOS/libs/ToasterTools.lua")
+DownloadFile("OneOS/libs/bigfont.lua","https://raw.githubusercontent.com/Cheatoid/ComputerCraft-Cloud/main/typescript/Wojbie%20bigfont/out/bigfont.lua")
 
 VerfPathExists("UserData/Desktop")
 VerfPathExists("UserData/Apps")
