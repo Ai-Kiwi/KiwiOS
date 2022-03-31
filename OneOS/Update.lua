@@ -75,6 +75,7 @@ DownloadFile("OneOS/sysapp/appManager.lua","https://raw.githubusercontent.com/Ai
 DownloadFile("OneOS/sysapp/desktop.lua","https://raw.githubusercontent.com/Ai-Kiwi/OneOS/master/OneOS/sysapp/desktop.lua")
 DownloadFile("OneOS/sysapp/desktop.lua","https://raw.githubusercontent.com/Ai-Kiwi/OneOS/master/OneOS/sysapp/desktop.lua")
 DownloadFile("OneOS/sysapp/StartMenu.lua","https://raw.githubusercontent.com/Ai-Kiwi/OneOS/master/OneOS/sysapp/StartMenu.lua")
+DownloadFile("OneOS/libs/ToasterTools.lua","https://raw.githubusercontent.com/Ai-Kiwi/OneOS/master/OneOS/libs/ToasterTools.lua")
 
 
 VerfPathExists("UserData/Desktop")
