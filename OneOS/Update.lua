@@ -36,7 +36,8 @@ end
 
 LoadTextInMiddleOfScreen("OneOS","Looking for updates")
 if GetVersionInstalled() == "0.1" then
-    return
+    --stop because no update needed
+    error("", -1)
 end
 
 
