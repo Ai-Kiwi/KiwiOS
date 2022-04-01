@@ -1,4 +1,5 @@
 local MoniterX, MontierY = term.getSize()
+local args = {...}
 
 local function LoadTextInMiddleOfScreen(TextToWrite,TextToWriteBelow)
     term.clear()
@@ -34,6 +35,8 @@ local function GetVersionInstalled()
     return VersionInstalled
 end
 
+if args[1] == "install" then
+else
 LoadTextInMiddleOfScreen("OneOS","Looking for updates")
 if GetVersionInstalled() == "0.1" then
     --stop because no update needed
@@ -42,6 +45,7 @@ end
 
 
 LoadTextInMiddleOfScreen("Updating")
+end
 
 local function VerfPathExists(FilePath)
     fs.makeDir(FilePath)
