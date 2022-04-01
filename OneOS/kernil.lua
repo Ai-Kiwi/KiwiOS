@@ -415,7 +415,7 @@ while #AppsRunnning > 0 do
                 -- openNewApp <name> <path> <order> <WindowMode>
 
                 --cheek they are all correct
-                if type(Output2) == "string" and type(Output3) == "string" and type(Output4) == "number" and type(Output5) == "number" then
+                if type(Output2) == "string" and type(Output3) == "string" and type(Output4) == "number" and type(Output5) == "string" then
                     CreateNewApp(Output2,Output3,Output4,Output5)
                     LoopCoroutine({"created_new_app",Output2})
                 else
