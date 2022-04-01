@@ -46,7 +46,9 @@ while true do
         --look if they are clicking on one os icon
         if X >= 1 and X <= 5 then
             --open app luancher
-            
+            --openNewApp <name> <path> <order> <WindowMode>
+            coroutine.yield("openNewApp", "Start_Menu", "OneOS/sysapp/StartMenu.lua", 100, "3")
+
             
         end
             
