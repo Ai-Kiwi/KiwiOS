@@ -76,7 +76,6 @@ DownloadFile("OneOS/kernil.lua","https://raw.githubusercontent.com/Ai-Kiwi/OneOS
 DownloadFile("OneOS/startup.lua","https://raw.githubusercontent.com/Ai-Kiwi/OneOS/master/OneOS/startup.lua")
 DownloadFile("OneOS/windowManager.lua","https://raw.githubusercontent.com/Ai-Kiwi/OneOS/master/OneOS/windowManager.lua")
 --files in OneOs/sysapp
-DownloadFile("OneOS/sysapp/appManager.lua","https://raw.githubusercontent.com/Ai-Kiwi/OneOS/master/OneOS/sysapp/appManager.lua")
 DownloadFile("OneOS/sysapp/desktop.lua","https://raw.githubusercontent.com/Ai-Kiwi/OneOS/master/OneOS/sysapp/desktop.lua")
 DownloadFile("OneOS/sysapp/taskmanager.lua","https://raw.githubusercontent.com/Ai-Kiwi/OneOS/master/OneOS/sysapp/taskmanager.lua")
 DownloadFile("OneOS/sysapp/StartMenu.lua","https://raw.githubusercontent.com/Ai-Kiwi/OneOS/master/OneOS/sysapp/StartMenu.lua")
