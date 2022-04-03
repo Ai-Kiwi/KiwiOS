@@ -141,6 +141,8 @@ local function CreateNewApp(AppName,AppPath,AppOrder,WindowMode)
     App.UUID = ProgramUUIDupto
     App.CoroutineTime = 0
     table.insert(AppsRunnning, App)
+
+    os.queueEvent("app_start",App.UUID)
 end
 
 local function ConvertUUIDToApp(UUID)
