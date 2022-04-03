@@ -13,9 +13,15 @@ local function DownloadFile(FilePath,URL)
 end
 
 term.setBackgroundColor(colors.black)
+term.setTextColor(colors.yellow)
+print("Thank you for chosing OneOS")
+print("please types \"yes\" to confirm you wanna install OneOS")
+if (term.read() ~= "yes") then
+    print("You have not typed \"yes\"")
+    print("Exiting installer")
+    error("",-1)
+end
 term.setTextColor(colors.white)
-term.clear()
-term.setCursorPos(1,1)
 print("Installing...")
 print("creating document folder...")
 fs.makeDir("/UserData/Documents/")
