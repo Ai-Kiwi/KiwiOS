@@ -16,7 +16,7 @@ term.setBackgroundColor(colors.black)
 term.setTextColor(colors.yellow)
 print("Thank you for chosing OneOS")
 print("please types \"yes\" to confirm you wanna install OneOS")
-if (term.read() ~= "yes") then
+if (read() ~= "yes") then
     print("You have not typed \"yes\"")
     print("Exiting installer")
     error("",-1)
