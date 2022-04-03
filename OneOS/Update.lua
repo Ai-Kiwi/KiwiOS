@@ -91,6 +91,8 @@ VerfPathExists("UserData/Pictures")
 VerfPathExists("UserData/Music")
 VerfPathExists("UserData/Videos")
 VerfPathExists("UserData/Downloads")
+VerfPathExists("UserData/Apps")
+
 
 
 --edit the update file and replace the old one with the new one
