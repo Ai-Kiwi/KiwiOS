@@ -145,10 +145,11 @@ end
 
 --draws text if key is not lisanced
 --lmoa not coded so it just always says it
-term.setBackgroundColor(colors.white)
-term.setTextColor(colors.black)
-term.setCursorPos(MoniterX - 13,MoniterY - 2)
-term.write("unlisanced")
+
+--term.setBackgroundColor(colors.white)
+--term.setTextColor(colors.black)
+--term.setCursorPos(MoniterX - 13,MoniterY - 2)
+--term.write("unlisanced")
 
 
 term.setBackgroundColor(orginal_Background)
