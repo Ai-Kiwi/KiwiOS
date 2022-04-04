@@ -7,7 +7,13 @@ local function DownloadFile(FilePath,URL)
 
     --save file
     local File = fs.open(FilePath,"w")
+    if File == nil then
+        error("Failed to download file")
+    end
     local DownloadedFile = http.get(URL .. "?cb=" .. math.random(1,10000))
+    if DownloadedFile == nil then
+        error("Failed to save file")
+    end
     File.write(DownloadedFile.readAll())
     File.close()
 end
