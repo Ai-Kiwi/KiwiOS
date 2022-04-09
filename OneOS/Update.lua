@@ -72,6 +72,7 @@ end
 --files in root
 DownloadFile("startup.lua","https://raw.githubusercontent.com/Ai-Kiwi/OneOS/master/startup.lua")
 --download files in OneOS
+DownloadFile("OneOS/OneOS.lua","https://raw.githubusercontent.com/Ai-Kiwi/OneOS/master/OneOS/OneOS.lua")
 DownloadFile("OneOS/kernil.lua","https://raw.githubusercontent.com/Ai-Kiwi/OneOS/master/OneOS/kernil.lua")
 DownloadFile("OneOS/startup.lua","https://raw.githubusercontent.com/Ai-Kiwi/OneOS/master/OneOS/startup.lua")
 DownloadFile("OneOS/windowManager.lua","https://raw.githubusercontent.com/Ai-Kiwi/OneOS/master/OneOS/windowManager.lua")
