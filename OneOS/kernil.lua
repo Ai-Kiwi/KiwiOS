@@ -163,12 +163,14 @@ end
 
 
 
-CreateNewApp("desktop","OneOS/sysapp/desktop.lua",-250,"2")
-CreateNewApp("taskbar","OneOS/sysapp/taskbar.lua",100,"3")
 
 --CreateNewApp("shell","rom/programs/shell.lua",1,1)
 
 --CreateNewApp("worm","rom/programs/worm.lua",1,2)
+CreateNewApp("OneOS","OneOS/OneOS.lua",-100,"0")
+
+
+
 
 while #AppsRunnning > 0 do
     local TempCpuUsage = os.epoch("utc")
@@ -414,7 +416,7 @@ while #AppsRunnning > 0 do
                 end
 
             elseif Output == "open_new_app" then
-                -- openNewApp <name> <path> <order> <WindowMode>
+                -- open_new_app <name> <path> <order> <WindowMode>
 
                 --cheek they are all correct
                 if type(Output2) == "string" and type(Output3) == "string" and type(Output4) == "number" and type(Output5) == "string" then
