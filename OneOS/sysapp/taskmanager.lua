@@ -6,7 +6,7 @@ term.setBackgroundColor(colors.white)
 term.setTextColor(colors.black)
 
 while true do
-    app_list = coroutine.yield("app_list")
+    Event, app_list = coroutine.yield("app_list")
     MoniterX, MoniterY = term.getSize()
 
     term.clear()
@@ -33,7 +33,7 @@ while true do
         term.setCursorPos(6,(k *4))
         term.setTextColor(colors.black)
         term.setBackgroundColor(colors.orange)
-        term.write("Restart")
+        --term.write("Restart")
         
 
 
@@ -51,7 +51,7 @@ while true do
         else
             if x >= 1 and x <= 4 then
                 --kill app
-                coroutine.yield("kill",app_list[AppPicked].UUID)
+                coroutine.yield("kill_app",app_list[AppPicked].UUID)
             end
             if x >= 6 and x <= 10 then
                 --restart app
