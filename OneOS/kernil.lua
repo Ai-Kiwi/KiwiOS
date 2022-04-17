@@ -141,6 +141,8 @@ local function CreateNewApp(AppName,AppPath,AppOrder,WindowMode)
     App.UUID = ProgramUUIDupto
     App.CoroutineTime = 0
     table.insert(AppsRunnning, App)
+
+    os.queueEvent("app_start",App.UUID)
 end
 
 local function ConvertUUIDToApp(UUID)
@@ -161,12 +163,14 @@ end
 
 
 
-CreateNewApp("desktop","OneOS/sysapp/desktop.lua",-250,"2")
-CreateNewApp("taskbar","OneOS/sysapp/taskbar.lua",100,"3")
 
 --CreateNewApp("shell","rom/programs/shell.lua",1,1)
 
 --CreateNewApp("worm","rom/programs/worm.lua",1,2)
+CreateNewApp("OneOS","OneOS/OneOS.lua",-100,"0")
+
+
+
 
 while #AppsRunnning > 0 do
     local TempCpuUsage = os.epoch("utc")
@@ -246,10 +250,10 @@ while #AppsRunnning > 0 do
 
     --things to help the computer incase of proleam like emergancy commands, task manager and cmd.
     if PullEventTable[1] == "key" then
-        if PullEventTable[2] == keys.delete then
+        if PullEventTable[2] == keys.home then
             CreateNewApp("taskmanager","OneOS/sysapp/taskmanager.lua",50,"1")   
         end
-        if PullEventTable[2] == keys.home then
+        if PullEventTable[2] == keys.delete then
             CreateNewApp("shell","rom/programs/shell.lua",1,"1")
         end
     end
@@ -382,6 +386,7 @@ while #AppsRunnning > 0 do
                 --kill_app <UUID>
                 KillUUID(Output2)
                 LoopCoroutine({"killed_app",Output2})
+
             elseif Output == "get_screen_size" then
                 --GetScreenSize
                 LoopCoroutine({"got_screen_size",MoniterX,MoniterY})
@@ -412,10 +417,10 @@ while #AppsRunnning > 0 do
                 end
 
             elseif Output == "open_new_app" then
-                -- openNewApp <name> <path> <order> <WindowMode>
+                -- open_new_app <name> <path> <order> <WindowMode>
 
                 --cheek they are all correct
-                if type(Output2) == "string" and type(Output3) == "string" and type(Output4) == "number" and type(Output5) == "number" then
+                if type(Output2) == "string" and type(Output3) == "string" and type(Output4) == "number" and type(Output5) == "string" then
                     CreateNewApp(Output2,Output3,Output4,Output5)
                     LoopCoroutine({"created_new_app",Output2})
                 else
@@ -446,7 +451,9 @@ while #AppsRunnning > 0 do
                 LoopCoroutine(PullEventTable,true)
             end
             TimeAppTook = os.epoch("utc") - TimeAppTook
+            if not v == nil then
             v.CoroutineTime = TimeAppTook
+            end
         end
         term.native = DoubbleBuffer
         

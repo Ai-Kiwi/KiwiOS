@@ -1,5 +1,6 @@
 local args = {...}
 local TimeStartedSinceDrawing = os.epoch("utc")
+local MoniterX, MoniterY = term.getSize()
 
 if args[1] == nil then return end
 if args[2] == nil then return end
@@ -129,20 +130,26 @@ for k,v in pairs(AppsRunnning) do
     
 end
 
---draws debug info
-term.setBackgroundColor(colors.black)
-term.setTextColor(colors.white)
+-- --draws debug info
+-- term.setBackgroundColor(colors.black)
+-- term.setTextColor(colors.white)
+-- 
+-- term.setCursorPos(1,1)
+-- for k,v in pairs(AppsRunnning) do
+--     print(v.UUID .. " " .. v.Name .. " " .. v.CoroutineTime)
+-- end
+-- print("Time: " .. os.epoch("utc") - TimeStartedSinceDrawing)
+-- --print size of the window
+-- local MoniterX, MoniterY = term.getSize()
+-- print("Window Size: " .. MoniterX .. "x" .. MoniterY)
 
-term.setCursorPos(1,1)
-for k,v in pairs(AppsRunnning) do
-    print(v.UUID .. " " .. v.Name .. " " .. v.CoroutineTime)
-end
-print("Time: " .. os.epoch("utc") - TimeStartedSinceDrawing)
---print size of the window
-local MoniterX, MoniterY = term.getSize()
-print("Window Size: " .. MoniterX .. "x" .. MoniterY)
+--draws text if key is not lisanced
+--lmoa not coded so it just always says it
 
-
+--term.setBackgroundColor(colors.white)
+--term.setTextColor(colors.black)
+--term.setCursorPos(MoniterX - 13,MoniterY - 2)
+--term.write("unlisanced")
 
 
 term.setBackgroundColor(orginal_Background)

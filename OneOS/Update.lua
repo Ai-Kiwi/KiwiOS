@@ -1,4 +1,5 @@
 local MoniterX, MontierY = term.getSize()
+local args = {...}
 
 local function LoadTextInMiddleOfScreen(TextToWrite,TextToWriteBelow)
     term.clear()
@@ -26,7 +27,7 @@ term.setTextColor(colors.white)
 --get verson installed
 local function GetVersionInstalled()
     local VersionInstalled = nil
-    local VersionFile = fs.open("OneOS/version.txt","r")
+    local VersionFile = fs.open("OneOS/Version_Installed.txt","r")
     if VersionFile then
         VersionInstalled = VersionFile.readLine()
         VersionFile.close()
@@ -34,19 +35,21 @@ local function GetVersionInstalled()
     return VersionInstalled
 end
 
+local ver = "0.2"
+
+if args[1] == "install" then
+else
 LoadTextInMiddleOfScreen("OneOS","Looking for updates")
-if GetVersionInstalled() == "0.1" then
-    return
+if GetVersionInstalled() == ver then
+    --stop because no update needed
+    error("", -1)
 end
 
 
 LoadTextInMiddleOfScreen("Updating")
+end
 
 local function VerfPathExists(FilePath)
-    term.setCursorPos(1,MontierY)
-    term.clearLine()
-    term.write(FilePath)
-    
     fs.makeDir(FilePath)
 end
 
@@ -59,31 +62,30 @@ local function DownloadFile(FilePath,URL)
     --make sure path is a thing
     VerfPathExists(fs.getDir(FilePath))
 
-    --download data from url
-    local URLOBJECT = http.get(URL .. "cb=" .. math.random(1,10000))
-    local FileData = URLOBJECT.readAll()
-    URLOBJECT.close()
 
     --save file
     local File = fs.open(FilePath,"w")
-    local DownloadedFile = http.get(URL)
+    local DownloadedFile = http.get(URL .. "?cb=" .. math.random(1,10000))
     File.write(DownloadedFile.readAll())
     File.close()
 end
 
 
 --files in root
-DownloadFile("startup.lua","https://raw.githubusercontent.com/OneOS/OneOS/master/startup.lua")
+DownloadFile("startup.lua","https://raw.githubusercontent.com/Ai-Kiwi/OneOS/master/startup.lua")
 --download files in OneOS
-DownloadFile("OneOS/kernil.lua","https://raw.githubusercontent.com/OneOS/OneOS/master/OneOS/kernil.lua")
-DownloadFile("OneOS/startup.lua","https://raw.githubusercontent.com/OneOS/OneOS/master/OneOS/startup.lua")
-DownloadFile("OneOS/windowManager.lua","https://raw.githubusercontent.com/OneOS/OneOS/master/OneOS/windowManager.lua")
+DownloadFile("OneOS/kernil.lua","https://raw.githubusercontent.com/Ai-Kiwi/OneOS/master/OneOS/kernil.lua")
+DownloadFile("OneOS/OneOS.lua","https://raw.githubusercontent.com/Ai-Kiwi/OneOS/master/OneOS/OneOS.lua")
+DownloadFile("OneOS/startup.lua","https://raw.githubusercontent.com/Ai-Kiwi/OneOS/master/OneOS/startup.lua")
+DownloadFile("OneOS/windowManager.lua","https://raw.githubusercontent.com/Ai-Kiwi/OneOS/master/OneOS/windowManager.lua")
 --files in OneOs/sysapp
-DownloadFile("OneOS/sysapp/appManager.lua","https://raw.githubusercontent.com/OneOS/OneOS/master/OneOS/sysapp/appManager.lua")
-DownloadFile("OneOS/sysapp/desktop.lua","https://raw.githubusercontent.com/OneOS/OneOS/master/OneOS/sysapp/desktop.lua")
-DownloadFile("OneOS/sysapp/desktop.lua","https://raw.githubusercontent.com/OneOS/OneOS/master/OneOS/sysapp/desktop.lua")
-DownloadFile("OneOS/sysapp/StartMenu.lua","https://raw.githubusercontent.com/OneOS/OneOS/master/OneOS/sysapp/StartMenu.lua")
-
+DownloadFile("OneOS/sysapp/desktop.lua","https://raw.githubusercontent.com/Ai-Kiwi/OneOS/master/OneOS/sysapp/desktop.lua")
+DownloadFile("OneOS/sysapp/StartMenu.lua","https://raw.githubusercontent.com/Ai-Kiwi/OneOS/master/OneOS/sysapp/StartMenu.lua")
+DownloadFile("OneOS/sysapp/taskbar.lua","https://raw.githubusercontent.com/Ai-Kiwi/OneOS/master/OneOS/sysapp/taskbar.lua")
+DownloadFile("OneOS/sysapp/taskmanager.lua","https://raw.githubusercontent.com/Ai-Kiwi/OneOS/master/OneOS/sysapp/taskmanager.lua")
+--files in OneOS/libs
+--DownloadFile("OneOS/libs/ToasterTools.lua","https://raw.githubusercontent.com/Ai-Kiwi/OneOS/master/OneOS/libs/ToasterTools.lua")
+DownloadFile("OneOS/libs/bigfont.lua","https://raw.githubusercontent.com/Cheatoid/ComputerCraft-Cloud/main/typescript/Wojbie%20bigfont/out/bigfont.lua")
 
 VerfPathExists("UserData/Desktop")
 VerfPathExists("UserData/Apps")
@@ -92,9 +94,14 @@ VerfPathExists("UserData/Pictures")
 VerfPathExists("UserData/Music")
 VerfPathExists("UserData/Videos")
 VerfPathExists("UserData/Downloads")
+VerfPathExists("UserData/Apps")
+
 
 
 --edit the update file and replace the old one with the new one
 local UpdateFile = fs.open("OneOS/Version_Installed.txt","w")
-UpdateFile.write("0.1")
+UpdateFile.write(ver)
 UpdateFile.close()
+
+LoadTextInMiddleOfScreen("Update Complete","Thanks for waiting")
+os.sleep(1)
