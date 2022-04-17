@@ -33,7 +33,7 @@ print("creating document folder...")
 fs.makeDir("/UserData/Documents/")
 print("moving all user data over to documents folder")
 local UserData = fs.list("/")
-for k,v in UserData do
+for k,v in pairs(UserData) do
     fs.move("/" .. v,"/UserData/Documents/" .. v)
 end
 
