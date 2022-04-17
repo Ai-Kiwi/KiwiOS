@@ -29,13 +29,14 @@ if (read() ~= "yes") then
 end
 term.setTextColor(colors.white)
 print("Installing...")
-print("creating document folder...")
-fs.makeDir("/UserData/Documents/")
-print("moving all user data over to documents folder")
-local UserData = fs.list("/")
-for k,v in pairs(UserData) do
-    fs.move("/" .. v,"/UserData/Documents/" .. v)
-end
+--on my todo list
+--print("creating document folder...")
+--fs.makeDir("/UserData/Documents/")
+--print("moving all user data over to documents folder")
+--local UserData = fs.list("/")
+--for k,v in pairs(UserData) do
+--    fs.move("/" .. v,"/UserData/Documents/" .. v)
+--end
 
 
 DownloadFile("OneOS/libs/bigfont.lua","https://raw.githubusercontent.com/Cheatoid/ComputerCraft-Cloud/main/typescript/Wojbie%20bigfont/out/bigfont.lua")
