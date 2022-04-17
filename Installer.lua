@@ -40,7 +40,7 @@ print("Installing...")
 
 
 DownloadFile("OneOS/libs/bigfont.lua","https://raw.githubusercontent.com/Cheatoid/ComputerCraft-Cloud/main/typescript/Wojbie%20bigfont/out/bigfont.lua")
-DownloadFile("OneOS/Update.lua","https://raw.githubusercontent.com/OneOS/OneOS/master/OneOS/Update.lua")
+DownloadFile("OneOS/Update.lua","https://raw.githubusercontent.com/Ai-Kiwi/OneOS/main/OneOS/Update.lua")
 print("running update")
 shell.run("OneOS/Update.lua")
 print("rebooting...")
