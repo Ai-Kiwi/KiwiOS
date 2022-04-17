@@ -72,17 +72,17 @@ end
 
 
 --files in root
-DownloadFile("startup.lua","https://raw.githubusercontent.com/Ai-Kiwi/KiwiOS/master/startup.lua")
+DownloadFile("startup.lua","https://raw.githubusercontent.com/Ai-Kiwi/KiwiOS/main/startup.lua")
 --download files in KiwiOS
-DownloadFile("KiwiOS/kernil.lua","https://raw.githubusercontent.com/Ai-Kiwi/KiwiOS/master/KiwiOS/kernil.lua")
-DownloadFile("KiwiOS/KiwiOS.lua","https://raw.githubusercontent.com/Ai-Kiwi/KiwiOS/master/KiwiOS/OneOS.lua")
-DownloadFile("KiwiOS/startup.lua","https://raw.githubusercontent.com/Ai-Kiwi/KiwiOS/master/KiwiOS/startup.lua")
-DownloadFile("KiwiOS/windowManager.lua","https://raw.githubusercontent.com/Ai-Kiwi/KiwiOS/master/KiwiOS/windowManager.lua")
+DownloadFile("KiwiOS/kernil.lua","https://raw.githubusercontent.com/Ai-Kiwi/KiwiOS/main/KiwiOS/kernil.lua")
+DownloadFile("KiwiOS/KiwiOS.lua","https://raw.githubusercontent.com/Ai-Kiwi/KiwiOS/main/KiwiOS/OneOS.lua")
+DownloadFile("KiwiOS/startup.lua","https://raw.githubusercontent.com/Ai-Kiwi/KiwiOS/main/KiwiOS/startup.lua")
+DownloadFile("KiwiOS/windowManager.lua","https://raw.githubusercontent.com/Ai-Kiwi/KiwiOS/main/KiwiOS/windowManager.lua")
 --files in KiwiOS/sysapp
-DownloadFile("KiwiOS/sysapp/desktop.lua","https://raw.githubusercontent.com/Ai-Kiwi/KiwiOS/master/KiwiOS/sysapp/desktop.lua")
-DownloadFile("KiwiOS/sysapp/StartMenu.lua","https://raw.githubusercontent.com/Ai-Kiwi/KiwiOS/master/KiwiOS/sysapp/StartMenu.lua")
-DownloadFile("KiwiOS/sysapp/taskbar.lua","https://raw.githubusercontent.com/Ai-Kiwi/KiwiOS/master/KiwiOS/sysapp/taskbar.lua")
-DownloadFile("KiwiOS/sysapp/taskmanager.lua","https://raw.githubusercontent.com/Ai-Kiwi/KiwiOS/master/KiwiOS/sysapp/taskmanager.lua")
+DownloadFile("KiwiOS/sysapp/desktop.lua","https://raw.githubusercontent.com/Ai-Kiwi/KiwiOS/main/KiwiOS/sysapp/desktop.lua")
+DownloadFile("KiwiOS/sysapp/StartMenu.lua","https://raw.githubusercontent.com/Ai-Kiwi/KiwiOS/main/KiwiOS/sysapp/StartMenu.lua")
+DownloadFile("KiwiOS/sysapp/taskbar.lua","https://raw.githubusercontent.com/Ai-Kiwi/KiwiOS/main/KiwiOS/sysapp/taskbar.lua")
+DownloadFile("KiwiOS/sysapp/taskmanager.lua","https://raw.githubusercontent.com/Ai-Kiwi/KiwiOS/main/KiwiOS/sysapp/taskmanager.lua")
 --files in KiwiOS/libs
 --DownloadFile("KiwiOS/libs/ToasterTools.lua","https://raw.githubusercontent.com/Ai-Kiwi/KiwiOS/master/KiwiOS/libs/ToasterTools.lua")
 DownloadFile("KiwiOS/libs/bigfont.lua","https://raw.githubusercontent.com/Cheatoid/ComputerCraft-Cloud/main/typescript/Wojbie%20bigfont/out/bigfont.lua")
