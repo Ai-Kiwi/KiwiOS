@@ -167,7 +167,7 @@ end
 --CreateNewApp("shell","rom/programs/shell.lua",1,1)
 
 --CreateNewApp("worm","rom/programs/worm.lua",1,2)
-CreateNewApp("OneOS","OneOS/OneOS.lua",-100,"0")
+CreateNewApp("KiwiOS","KiwiOS/KiwiOS.lua",-100,"0")
 
 
 
@@ -251,7 +251,7 @@ while #AppsRunnning > 0 do
     --things to help the computer incase of proleam like emergancy commands, task manager and cmd.
     if PullEventTable[1] == "key" then
         if PullEventTable[2] == keys.home then
-            CreateNewApp("taskmanager","OneOS/sysapp/taskmanager.lua",50,"1")   
+            CreateNewApp("taskmanager","KiwiOS/sysapp/taskmanager.lua",50,"1")   
         end
         if PullEventTable[2] == keys.delete then
             CreateNewApp("shell","rom/programs/shell.lua",1,"1")
@@ -461,7 +461,7 @@ while #AppsRunnning > 0 do
     term.redirect(DoubbleBuffer)
     --runs the app that draws app
 
-    os.run({},"OneOS/WindowManager.lua",AppsRunnning, WindowManagerSettings, SelectedApp)
+    os.run({},"KiwiOS/WindowManager.lua",AppsRunnning, WindowManagerSettings, SelectedApp)
     CpuUsage = os.epoch("utc") - TempCpuUsage
     table.insert(PastCPUUsage,1,CpuUsage)
     while #PastCPUUsage > 25 do

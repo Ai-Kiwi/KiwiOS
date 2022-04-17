@@ -27,7 +27,7 @@ term.setTextColor(colors.white)
 --get verson installed
 local function GetVersionInstalled()
     local VersionInstalled = nil
-    local VersionFile = fs.open("OneOS/Version_Installed.txt","r")
+    local VersionFile = fs.open("KiwiOS/Version_Installed.txt","r")
     if VersionFile then
         VersionInstalled = VersionFile.readLine()
         VersionFile.close()
@@ -39,7 +39,7 @@ local ver = "0.2"
 
 if args[1] == "install" then
 else
-LoadTextInMiddleOfScreen("OneOS","Looking for updates")
+LoadTextInMiddleOfScreen("KiwiOS","Looking for updates")
 if GetVersionInstalled() == ver then
     --stop because no update needed
     error("", -1)
@@ -72,20 +72,20 @@ end
 
 
 --files in root
-DownloadFile("startup.lua","https://raw.githubusercontent.com/Ai-Kiwi/OneOS/master/startup.lua")
---download files in OneOS
-DownloadFile("OneOS/kernil.lua","https://raw.githubusercontent.com/Ai-Kiwi/OneOS/master/OneOS/kernil.lua")
-DownloadFile("OneOS/OneOS.lua","https://raw.githubusercontent.com/Ai-Kiwi/OneOS/master/OneOS/OneOS.lua")
-DownloadFile("OneOS/startup.lua","https://raw.githubusercontent.com/Ai-Kiwi/OneOS/master/OneOS/startup.lua")
-DownloadFile("OneOS/windowManager.lua","https://raw.githubusercontent.com/Ai-Kiwi/OneOS/master/OneOS/windowManager.lua")
---files in OneOs/sysapp
-DownloadFile("OneOS/sysapp/desktop.lua","https://raw.githubusercontent.com/Ai-Kiwi/OneOS/master/OneOS/sysapp/desktop.lua")
-DownloadFile("OneOS/sysapp/StartMenu.lua","https://raw.githubusercontent.com/Ai-Kiwi/OneOS/master/OneOS/sysapp/StartMenu.lua")
-DownloadFile("OneOS/sysapp/taskbar.lua","https://raw.githubusercontent.com/Ai-Kiwi/OneOS/master/OneOS/sysapp/taskbar.lua")
-DownloadFile("OneOS/sysapp/taskmanager.lua","https://raw.githubusercontent.com/Ai-Kiwi/OneOS/master/OneOS/sysapp/taskmanager.lua")
---files in OneOS/libs
---DownloadFile("OneOS/libs/ToasterTools.lua","https://raw.githubusercontent.com/Ai-Kiwi/OneOS/master/OneOS/libs/ToasterTools.lua")
-DownloadFile("OneOS/libs/bigfont.lua","https://raw.githubusercontent.com/Cheatoid/ComputerCraft-Cloud/main/typescript/Wojbie%20bigfont/out/bigfont.lua")
+DownloadFile("startup.lua","https://raw.githubusercontent.com/Ai-Kiwi/KiwiOS/master/startup.lua")
+--download files in KiwiOS
+DownloadFile("KiwiOS/kernil.lua","https://raw.githubusercontent.com/Ai-Kiwi/KiwiOS/master/KiwiOS/kernil.lua")
+DownloadFile("KiwiOS/KiwiOS.lua","https://raw.githubusercontent.com/Ai-Kiwi/KiwiOS/master/KiwiOS/OneOS.lua")
+DownloadFile("KiwiOS/startup.lua","https://raw.githubusercontent.com/Ai-Kiwi/KiwiOS/master/KiwiOS/startup.lua")
+DownloadFile("KiwiOS/windowManager.lua","https://raw.githubusercontent.com/Ai-Kiwi/KiwiOS/master/KiwiOS/windowManager.lua")
+--files in KiwiOS/sysapp
+DownloadFile("KiwiOS/sysapp/desktop.lua","https://raw.githubusercontent.com/Ai-Kiwi/KiwiOS/master/KiwiOS/sysapp/desktop.lua")
+DownloadFile("KiwiOS/sysapp/StartMenu.lua","https://raw.githubusercontent.com/Ai-Kiwi/KiwiOS/master/KiwiOS/sysapp/StartMenu.lua")
+DownloadFile("KiwiOS/sysapp/taskbar.lua","https://raw.githubusercontent.com/Ai-Kiwi/KiwiOS/master/KiwiOS/sysapp/taskbar.lua")
+DownloadFile("KiwiOS/sysapp/taskmanager.lua","https://raw.githubusercontent.com/Ai-Kiwi/KiwiOS/master/KiwiOS/sysapp/taskmanager.lua")
+--files in KiwiOS/libs
+--DownloadFile("KiwiOS/libs/ToasterTools.lua","https://raw.githubusercontent.com/Ai-Kiwi/KiwiOS/master/KiwiOS/libs/ToasterTools.lua")
+DownloadFile("KiwiOS/libs/bigfont.lua","https://raw.githubusercontent.com/Cheatoid/ComputerCraft-Cloud/main/typescript/Wojbie%20bigfont/out/bigfont.lua")
 
 VerfPathExists("UserData/Desktop")
 VerfPathExists("UserData/Apps")
@@ -99,7 +99,7 @@ VerfPathExists("UserData/Apps")
 
 
 --edit the update file and replace the old one with the new one
-local UpdateFile = fs.open("OneOS/Version_Installed.txt","w")
+local UpdateFile = fs.open("KiwiOS/Version_Installed.txt","w")
 UpdateFile.write(ver)
 UpdateFile.close()
 

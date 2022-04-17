@@ -20,8 +20,8 @@ end
 
 term.setBackgroundColor(colors.black)
 term.setTextColor(colors.yellow)
-print("Thank you for chosing OneOS")
-print("please types \"yes\" to confirm you wanna install OneOS")
+print("Thank you for chosing KiwiOS")
+print("please types \"yes\" to confirm you wanna install KiwiOS")
 if (read() ~= "yes") then
     print("You have not typed \"yes\"")
     print("Exiting installer")
@@ -39,10 +39,10 @@ print("Installing...")
 --end
 
 
-DownloadFile("OneOS/libs/bigfont.lua","https://raw.githubusercontent.com/Cheatoid/ComputerCraft-Cloud/main/typescript/Wojbie%20bigfont/out/bigfont.lua")
-DownloadFile("OneOS/Update.lua","https://raw.githubusercontent.com/Ai-Kiwi/OneOS/main/OneOS/Update.lua")
+DownloadFile("KiwiOS/libs/bigfont.lua","https://raw.githubusercontent.com/Cheatoid/ComputerCraft-Cloud/main/typescript/Wojbie%20bigfont/out/bigfont.lua")
+DownloadFile("KiwiOS/Update.lua","https://raw.githubusercontent.com/Ai-Kiwi/KiwiOS/main/KiwiOS/Update.lua")
 print("running update")
-shell.run("OneOS/Update.lua")
+shell.run("KiwiOS/Update.lua")
 print("rebooting...")
 os.reboot()
 

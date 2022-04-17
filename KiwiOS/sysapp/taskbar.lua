@@ -18,7 +18,7 @@ while true do
     term.setCursorPos(1, 1)
     term.setBackgroundColor(colors.lightGray)
     term.setTextColor(colors.black)
-    term.write("OneOS")
+    term.write("KiwiOS")
     
     --draw apps
     local NewEvent, Apps = coroutine.yield("app_list")
@@ -43,10 +43,10 @@ while true do
     os.startTimer(1)
     local Event, Button, X, Y = os.pullEvent()
     if Event == "mouse_click" then
-        --look if they are clicking on one os icon
+        --look if they are clicking on KiwiOS icon
         if X >= 1 and X <= 5 then
             --open app luancher
-            coroutine.yield("open_new_app", "Start_Menu", "OneOS/sysapp/StartMenu.lua", 100, "3")
+            coroutine.yield("open_new_app", "Start_Menu", "KiwiOS/sysapp/StartMenu.lua", 100, "3")
             --open_new_app <name> <path> <order> <WindowMode>
 
             

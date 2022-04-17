@@ -41,22 +41,22 @@ end
 
 
 
-LoadTextInMiddleOfScreen("OneOS")
+LoadTextInMiddleOfScreen("KiwiOS")
 os.sleep(1)
-LoadTextInMiddleOfScreen("OneOS","updating updater")
+LoadTextInMiddleOfScreen("KiwiOS","updating updater")
 --download Update file
 if args[1] == "true" then
-    local UpdateFile = http.get("https://raw.githubusercontent.com/Ai-Kiwi/OneOS/main/OneOS/Update.lua" .. "?cb=" .. math.random(1,10000))
+    local UpdateFile = http.get("https://raw.githubusercontent.com/Ai-Kiwi/KiwiOS/main/KiwiOS/Update.lua" .. "?cb=" .. math.random(1,10000))
     if UpdateFile then
         local UpdateFileText = UpdateFile.readAll()
         UpdateFile.close()
-        local UpdateFileFile = fs.open("OneOS/Update.lua","w")
+        local UpdateFileFile = fs.open("KiwiOS/Update.lua","w")
         UpdateFileFile.write(UpdateFileText)
         UpdateFileFile.close()
 
-        shell.run("OneOS/Update.lua")
+        shell.run("KiwiOS/Update.lua")
     else
-        LoadTextInMiddleOfScreen("OneOS","Update failed")
+        LoadTextInMiddleOfScreen("KiwiOS","Update failed")
         os.sleep(1)
     end
 end
@@ -66,5 +66,5 @@ end
 
 
 
-shell.run("OneOs/kernil.lua")
+shell.run("KiwiOS/kernil.lua")
 

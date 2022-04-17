@@ -1,7 +1,7 @@
 local DevMode = false
 if DevMode == true then
     --starts with auto updates on
-    shell.run("OneOs/startup.lua false")
+    shell.run("KiwiOS/startup.lua false")
 else
-    shell.run("OneOs/startup.lua true")
+    shell.run("KiwiOS/startup.lua true")
 end
