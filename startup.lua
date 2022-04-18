@@ -1,3 +1,4 @@
+term.clear()
 local DevMode = false
 if DevMode == true then
     --starts with auto updates on
