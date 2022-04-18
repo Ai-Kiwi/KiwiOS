@@ -461,7 +461,7 @@ while #AppsRunnning > 0 do
     term.redirect(DoubbleBuffer)
     --runs the app that draws app
 
-    os.run({},"KiwiOS/WindowManager.lua",AppsRunnning, WindowManagerSettings, SelectedApp)
+    os.run({},"KiwiOS/windowManager.lua",AppsRunnning, WindowManagerSettings, SelectedApp)
     CpuUsage = os.epoch("utc") - TempCpuUsage
     table.insert(PastCPUUsage,1,CpuUsage)
     while #PastCPUUsage > 25 do
