@@ -15,4 +15,5 @@ please note KiwiOS is intended for my server as such there are things to verf va
  6. fix up task manager
  7. add file expolorer
  8. fix up shortcuts
+ 9. fix os not working if you force close desktop
 
