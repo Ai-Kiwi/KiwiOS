@@ -1,11 +1,11 @@
 local args = {...}
+local BigFont = require("libs.bigfont")
+local MoniterX, MontierY = term.getSize()
 
 local function LoadTextInMiddleOfScreen(TextToWrite,TextToWriteBelow)
     term.clear()
     --makes a noice start prompt using auto scaled text 
-    local MoniterX, MontierY = term.getSize()
-
-    local BigFont = require("libs.bigfont")
+    
 
 
     local TextSizeX = #TextToWrite * 3
@@ -66,5 +66,31 @@ end
 
 
 
-shell.run("KiwiOS/kernil.lua")
+shell.run("KiwiOS/kernil.luae")
 
+if term.TrueNative == nil then
+    term.TrueNative = term.native()
+end
+term.redirect(term.TrueNative)
+term.setBackgroundColor(colors.red)
+term.setTextColor(colors.white)
+term.clear()
+term.setCursorPos(1,1)
+BigFont.bigPrint(":(")
+
+print("KiwiOS was unfortunately running to fast and smacked into a brick wall known as an error.")
+print("")
+print("Please report the following error to the developer")
+print("<error code detection not yet installed>")
+
+local TimeToRestart = 15
+while true do
+    term.setCursorPos(1,MontierY)
+    term.clearLine()
+    term.write("Restarting in " .. TimeToRestart .. " seconds")
+    TimeToRestart = TimeToRestart - 1
+    if TimeToRestart == 0 then
+        os.reboot()
+    end
+    os.sleep(1)
+end
