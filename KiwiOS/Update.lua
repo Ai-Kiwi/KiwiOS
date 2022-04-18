@@ -75,7 +75,7 @@ end
 DownloadFile("startup.lua","https://raw.githubusercontent.com/Ai-Kiwi/KiwiOS/main/startup.lua")
 --download files in KiwiOS
 DownloadFile("KiwiOS/kernil.lua","https://raw.githubusercontent.com/Ai-Kiwi/KiwiOS/main/KiwiOS/kernil.lua")
-DownloadFile("KiwiOS/KiwiOS.lua","https://raw.githubusercontent.com/Ai-Kiwi/KiwiOS/main/KiwiOS/OneOS.lua")
+DownloadFile("KiwiOS/KiwiOS.lua","https://raw.githubusercontent.com/Ai-Kiwi/KiwiOS/main/KiwiOS/KiwiOS.lua")
 DownloadFile("KiwiOS/startup.lua","https://raw.githubusercontent.com/Ai-Kiwi/KiwiOS/main/KiwiOS/startup.lua")
 DownloadFile("KiwiOS/windowManager.lua","https://raw.githubusercontent.com/Ai-Kiwi/KiwiOS/main/KiwiOS/windowManager.lua")
 --files in KiwiOS/sysapp
