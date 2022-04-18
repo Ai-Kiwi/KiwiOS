@@ -8,7 +8,7 @@ please note KiwiOS is intended for my server as such there are things to verf va
 
 # things to change and add
  1. fix os start menu not working to well
- 2. fix os resize order
+ 2. fix os resize order (make app id pick if app ontop or pick when last app opened is ontop)
  3. make force close work better
  4. add file for all apps to boot
  5. add better background support
