@@ -66,7 +66,7 @@ end
 
 
 
-shell.run("KiwiOS/kernil.luae")
+shell.run("KiwiOS/kernil.lua")
 
 if term.TrueNative == nil then
     term.TrueNative = term.native()
