@@ -1,7 +1,18 @@
 # KiwiOS
 KiwiOS is a operating system for a mod for minecraft that adds working commputers to the game called cc twaeked.
 
-install guide
+# install guide
 ```wget run https://raw.githubusercontent.com/Ai-Kiwi/OneOS/main/Installer.lua```
 
 please note KiwiOS is intended for my server as such there are things to verf vaild codes and buy lisances that are mainly ment for my server. the methods arent to secure as the people useing the os dont know how todo programing
+
+# things to change and add
+ 1. fix os start menu not working to well
+ 2. fix os resize order
+ 3. make force close work better
+ 4. add file for all apps to boot
+ 5. add better background support
+ 6. fix up task manager
+ 7. add file expolorer
+ 8. fix up shortcuts
+
