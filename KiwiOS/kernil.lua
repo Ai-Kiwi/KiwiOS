@@ -1,6 +1,7 @@
 local MoniterX, MoniterY = term.getSize()
 local OldMoniterX, OldMoniterY = MoniterX, MoniterY
 local RootTerm = term.native()
+term.TrueNative = term.native()
 local DoubbleBuffer = window.create(RootTerm, 1, 1, MoniterX, MoniterY,false)
 local ProgramUUIDupto = 0
 local SelectedApp = 0
