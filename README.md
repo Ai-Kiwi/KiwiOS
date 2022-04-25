@@ -21,4 +21,4 @@ please note KiwiOS is intended for my server as such there are things to verf va
  12. find out why CC-Music crashs when running
  13. add compatablity mode for none toaster apps that makes them run in a vitrual file system so they dont edit root files
  14. auto focus on app select screen
- 15. cloud app run
+ 15. mode for everything that lets in run from cloud instead of local
