@@ -18,4 +18,6 @@ please note KiwiOS is intended for my server as such there are things to verf va
  9. fix os not working if you force close desktop
  10. add fullscreen app option
  11. add moblie support
+ 12. find out why CC-Music crashs when running
+ 13. add compatablity mode for none toaster apps that makes them run in a vitrual file system so they dont edit root files
 
