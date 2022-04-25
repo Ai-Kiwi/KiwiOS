@@ -11,7 +11,7 @@ please note KiwiOS is intended for my server as such there are things to verf va
  2. fix os resize order (make app id pick if app ontop or pick when last app opened is ontop)
  3. make force close work better
  4. add file for all apps to boot
- 5. add better background support
+ 5. add better background support (with defult image)
  6. fix up task manager
  7. add file expolorer
  8. fix up shortcuts
@@ -22,3 +22,4 @@ please note KiwiOS is intended for my server as such there are things to verf va
  13. add compatablity mode for none toaster apps that makes them run in a vitrual file system so they dont edit root files
  14. auto focus on app select screen
  15. mode for everything that lets in run from cloud instead of local
+ 16. add settings for everything like outlines for images
