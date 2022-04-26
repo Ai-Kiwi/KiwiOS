@@ -1,3 +1,7 @@
+#  why stoped?
+my os making has been for the foreseeable future stoped for a reason why have a read of 
+https://gist.github.com/MCJack123/4b2bca21bdc0cf5c67ce7177326c2154 (not by me but describes perfectly)
+
 # KiwiOS
 KiwiOS is a operating system for a mod for minecraft that adds working commputers to the game called cc twaeked.
 
